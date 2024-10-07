@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox : introduction au CSS</title>
+    <style>
+        h1 {
+            font-style: italic;
+            text-transform: uppercase;
+        }
+        h1, h2, h3 {
+            color: blue !important;
+            text-decoration: underline;
+        }
+        strong {
+            background-color: yellow;
+        }
+        /* p {
+            color: green;
+        } */
+        /* Vos styles ici */
+    </style>
+    <link rel="stylesheet" href="css/external-stylesheet.css">
+</head>
+
+<body>
+    <article id="top">
+        <header><h>Séries télévisées à ne pas manquer</h1></header>
+        <main>
+            <div class="stranger-thing-box box">
+                <h2 id="strangerthings">Stranger sthings by <span>Netflix</span></h2>
+                <img src="img\stranger-things.jpg" alt="Stranger things" width="450 height=" 300">
+                <p><strong>Stranger Things</strong> est une série télévisée de science-fiction horrifique mâtinée de fantasy
+                    (présence d'une dimension parallèle...) américaine, créée par les frères Duffer et diffusée depuis le 15
+                    juillet 2016 sur Netflix. Elle compte à ce jour trois saisons et vingt-cinq épisodes.</p>
+                <p>L'ambiance de la série est fortement inspirée par les films fantastiques et de science-fiction des années
+                    1980, piochant ses influences dans les œuvres de <span>H. P. Lovecraft</span>, <span>Steven Spielberg</span>, <span>John Carpenter</span>, <span>John
+                    Hughes</span> ou <span>Stephen Kin</span>g.</p>
+                <h3>Synopsis</h3>
+                <p>A Hawkins, en 1983 dans l'Indiana. Lorsque Will Byers disparaît de son domicile, ses amis se lancent dans
+                    une recherche semée d’embûches pour le retrouver. Dans leur quête de réponses, les garçons rencontrent
+                    une étrange jeune fille en fuite. Les garçons se lient d'amitié avec la demoiselle tatouée du chiffre
+                    "11" sur son poignet et au crâne rasé et découvrent petit à petit les détails sur son inquiétante
+                    situation. Elle est peut-être la clé de tous les mystères qui se cachent dans cette petite ville en
+                    apparence tranquille…</p>
+            </div>
+            <div class="theboys-box box">
+                <h2 id="theboys">The boys by <span>Amazon Prime</span></h2>
+                <img src="img\the-boys.jpg" alt="The boys" width="450 height=" 300">
+                <p><strong>The Boys</strong> est une série télévisée américaine de super-héros basée sur la bande dessinée
+                    du même nom de <span>Garth Ennis</span> et <span>Darick Robertson</span>. La série a été développée par
+                    <span>Eric Kripke</span>. Elle est diffusée dans le monde entier depuis le 26 juillet 2019 sur Prime Video.</p>
+                <h3>Synopsis</h3>
+                <p>Dans un monde fictif où les super-héros se sont laissés corrompre par la célébrité et la gloire et ont
+                    peu à peu révélé la part sombre de leur personnalité, une équipe de justiciers qui se fait appeler "The
+                    Boys" décide de passer à l'action et d'abattre ces super-héros autrefois appréciés de tous.</p>
+            </div>
+            <div>
+                <a href="#top" title="Haut de page" class="back-to-top">&uarr;</a>
+            </div>
+        </main>
+    </article>
+</body>
+
+</html>

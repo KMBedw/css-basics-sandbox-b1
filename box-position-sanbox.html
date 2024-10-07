@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox : position des boîtes</title>
+    <style>
+        /* Effet de display: block/list-item sur .span-1 */
+        /* Effet de display: inline sur .p2 et .p3 */
+        /* Effet de display: none, visibilty:hidden et opacity: 0 sur .p-ghost */
+        /* Effet de position: relative sur .p4 */
+        /* Effet de position: absolute sur .elt-pos-absolute */
+        /* Effet de position: fixed sur .elt-pos-fixed */
+        /* Effet de position: sticky sur header et .elt-pos-sticky */
+        /* Effet de z-index sur .elt-1, .elt-2, .elt-3 avec ou sans overflow sur .z-zone */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.1em;
+            padding: 1em;
+        }
+        header {
+            background: rgb(0, 0, 255, 0.5);
+            padding: 1em;
+        }
+        main {
+            width: 50vw;
+            line-height: 1.5em;
+            margin: auto;
+        }
+        main > *::before {
+            content: attr(class);
+            background: black;
+            color: white;
+            margin: 0 1em 0 0;
+            padding: 0 0.5em;
+            text-transform: uppercase;
+        }
+        .elt-pos-absolute,
+        .elt-pos-fixed {
+            width: 25vmin;
+            height: 25vmin;
+            display: block;
+            margin: 0;
+            padding: 10px;
+        }
+        .elt-pos-absolute {
+            background:rgb(255, 0, 0, 0.5);
+        }
+        .elt-pos-fixed {
+            background:rgb(0, 255, 0, 0.5);
+        }
+        .z-zone {
+            position: relative;
+            height: 20em;
+            border: 1px solid #ddd;
+            margin: 1em auto;
+            padding: 1em;
+        }
+        .z-zone > div {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            font-weight: bold;
+        }
+        .elt-1 {
+            background: cyan;
+            top: 100px;
+            left: 200px;
+        }
+        .elt-2 {
+            background: magenta;
+            top: 170px;
+            left: 270px;
+        }
+        .elt-3 {
+            background: yellow;
+            top: 100px;
+            left: 340px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Affichage et position des boîtes</h1>
+    </header>
+    <main>
+        <div class="z-zone">
+            <div class="elt-1">1</div>
+            <div class="elt-2">2</div>
+            <div class="elt-3">3</div>
+        </div>
+        <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quo exercitationem quaerat illo odit expedita nam vitae at neque dolorem dignissimos error quod! Neque, inventore sunt vero vel quibusdam repellat.
+        Distinctio cupiditate deserunt accusantium, <span class="span-1">quo aliquid excepturi iste modi</span>, eveniet eaque nihil tempore saepe quae. Consectetur quas dignissimos, magni quasi suscipit repellat quos, non commodi minus voluptatem perferendis in blanditiis?
+        <p class="p-ghost">Alias tempore doloribus eos debitis quos. Labore quibusdam harum amet quis asperiores quisquam saepe quos voluptate ea a, quasi aliquid tempora consectetur atque dolorum dolore rem, repellat maiores libero in.</p>
+        <p class="p2">Blanditiis et rerum consequuntur corporis, eveniet perspiciatis quis reiciendis aliquid nihil impedit similique, molestias perferendis assumenda culpa. Laboriosam, repellendus facere, dignissimos nemo porro fugit velit in, impedit ab non iure.</p>
+        <p class="p3">Quos sapiente deleniti voluptatibus exercitationem amet laudantium itaque, minima magni cum corrupti quam quia totam dolor, asperiores quisquam veritatis laboriosam perspiciatis, ab consectetur sunt. Iure laudantium ullam quos perspiciatis ea!
+        Rem magni consequatur, unde assumenda id possimus ipsa soluta, aut natus ratione hic placeat eaque quo necessitatibus! Officiis repellendus harum distinctio, dolorum expedita, sit doloribus molestiae esse itaque earum explicabo.</p>
+        <p class="p4"><strong>Officia laborum tempore expedita</strong> <mark class="mark-absolute">sint natus veniam molestias</mark> <strong>aut qui rerum</strong>. Aut, aliquid laudantium! Recusandae qui amet cumque est magni sint consequuntur, id rem doloremque sit facere nihil culpa quidem.</p>
+        <p class="p5 elt-pos-sticky">Corporis repudiandae suscipit repellat natus eum debitis, fugit aliquam a nobis excepturi tempora placeat minus quod illum ut? Aut rerum ea sunt dolor praesentium tempora deserunt quae vel porro eligendi. Possimus maiores nisi reiciendis architecto iure asperiores saepe unde eos fugiat et aperiam tenetur veniam praesentium enim exercitationem nihil, soluta accusamus! Voluptate praesentium quasi officiis maiores voluptates porro dolorem facilis! Perferendis debitis quod cum labore. Temporibus error optio nesciunt odit est voluptatem maxime, reprehenderit minus aperiam tempora minima nihil quidem unde ab ratione impedit incidunt. Modi a aliquam perspiciatis quam. Quaerat id assumenda modi aliquid aliquam corporis tempora. Numquam officiis illum consequuntur eos sequi culpa minima, adipisci quod nam laudantium? Aliquam ipsa quo sit velit architecto temporibus ex officiis magnam? Earum expedita voluptate accusantium quas cum debitis suscipit et commodi, ipsum quaerat, tempora culpa vel pariatur facere, totam magnam. Totam, debitis! Vel perspiciatis fugiat reiciendis? Quo nemo distinctio eius mollitia.</p>
+        <p class="p6">Laboriosam ex debitis amet! Dolorum, inventore blanditiis ipsa molestias incidunt id cumque dolore fuga adipisci vel exercitationem laboriosam sequi libero ex ullam sit asperiores? Aliquid nam corporis quia id quae? Eos possimus voluptatibus soluta animi voluptates officiis fuga dolor vitae quam exercitationem. Id voluptatum nam deserunt ullam quod repellendus cupiditate temporibus dolor sapiente aperiam illo, quidem, laudantium, corrupti expedita ratione. Et voluptates non repellat explicabo eligendi esse exercitationem sunt facilis animi enim adipisci consequuntur rem illum minima quos earum quas voluptatum, sequi vitae sint sed culpa sapiente assumenda. Soluta, eos! Laborum, eligendi. Ullam, pariatur! Sed natus delectus explicabo quos error id repellat? Mollitia dolore quidem fugiat quibusdam eligendi cum repudiandae amet voluptate? Assumenda eveniet id ipsa rem veritatis nam asperiores? Maiores veritatis, eos reiciendis totam accusantium cupiditate tenetur? Quos exercitationem sint praesentium et tenetur est molestias tempora impedit omnis repudiandae libero, mollitia porro excepturi sit. Doloribus animi deserunt quae quaerat.</p>
+        <p class="p7">Enim qui perferendis quos commodi, ad atque nam totam eius consequuntur voluptates! Omnis possimus ipsam nostrum saepe, incidunt totam eius consequatur fuga facilis perferendis provident! Quibusdam minima libero atque error. Placeat autem iusto voluptatibus. Mollitia non aliquid temporibus placeat delectus earum, corporis tenetur assumenda qui officia totam explicabo voluptates dolor libero amet provident maxime? Provident eum modi facere officia non. Dolores odit quaerat illum rerum ipsa perferendis nemo dolor non quod quae, facilis reprehenderit explicabo qui! Sed nisi, assumenda consequatur, veritatis repellendus numquam rem necessitatibus quidem velit quae obcaecati id.</p>
+        <p class="elt-pos-absolute"></p>
+        <p class="elt-pos-fixed"></p>
+    </main>
+</body>
+</html>

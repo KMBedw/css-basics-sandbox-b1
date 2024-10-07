@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox : les éléments flottants</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.1em;
+            padding: 1em;
+        }
+
+        .grid-zone {
+            width: 75vw;
+            line-height: 1.5em;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+
+        .float-elt {
+            height: 200px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: red;
+            color: white;
+            font-size: 4em;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        /* Comportement des éléments flottants première partie : float */
+        /* Comportement des éléments flottants deuxième partie : clear  */
+    </style>
+</head>
+
+<body>
+    <main class="grid-zone">
+        <div class="grid-zone-1">
+            <h2>Propriétés de <code>float</code></h2>
+            <span class="float-elt">1</span>
+            <span class="float-elt">2</span>
+            <span class="float-elt">3</span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae cupiditate possimus
+                nesciunt esse explicabo totam velit? Unde, dignissimos odio vitae nobis ipsum itaque natus atque?
+                Praesentium deleniti tempora quisquam! Consequatur assumenda eos voluptas distinctio atque aspernatur,
+                corporis eum, quas id dolorum exercitationem laboriosam dolorem. Nam consectetur, voluptates atque
+                veniam laudantium cumque reiciendis accusamus minus tenetur quidem quis voluptatem dolore! Tempore,
+                officiis voluptates ad sit soluta possimus minus, id error accusamus totam laudantium aperiam eveniet
+                labore a minima exercitationem quaerat dolore? Accusantium tempore id quod maiores et autem hic eveniet.
+                Dignissimos soluta quasi iure necessitatibus nulla vitae sequi dolores, doloribus sunt illo non impedit
+                exercitationem error quia animi officiis? Impedit odio ullam debitis consequatur. Temporibus inventore
+                modi consequuntur dignissimos aliquam.
+            </p>
+        </div>
+        <div class="grid-zone-2">
+            <h2>Propriétés de <code>clear</code></h2>
+            <p>
+                <span class="float-elt">1</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae cupiditate possimus
+                nesciunt esse explicabo totam velit? Unde, dignissimos odio vitae nobis ipsum itaque natus atque?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ad maiores debitis voluptatibus numquam?
+                Numquam cumque voluptatem maxime fugit atque quis provident, vel blanditiis ratione! Eaque sunt sapiente
+                quas ipsa.</p>
+        </div>
+    </main>
+</body>
+
+</html>
